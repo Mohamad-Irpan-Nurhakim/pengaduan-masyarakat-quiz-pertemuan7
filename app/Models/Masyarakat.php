@@ -13,4 +13,10 @@ class Masyarakat extends Model
         'alamat',
         'jenis_kelamin'
     ];
+
+    public function hasMany($related, $foreignKey = null, $localkey = null) 
+    {
+        return $this->hasMany(Keluhan:: class, 'masyarakat_id');
+    }
 }
+
